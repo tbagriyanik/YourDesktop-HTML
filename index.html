@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Desktop</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/window.css">
+    <link rel="stylesheet" href="css/taskbar.css">
+    <link rel="stylesheet" href="css/startmenu.css">
+    <link rel="stylesheet" href="css/themes/win7.css">
+    <link rel="stylesheet" href="css/apps/notepad.css">
+    <link rel="stylesheet" href="css/apps/paint.css">
+    <link rel="stylesheet" href="css/apps/games.css">
+    <link rel="stylesheet" href="css/apps/settings.css">
+    <link rel="stylesheet" href="css/apps/dbviewer.css">
+    <link rel="stylesheet" href="css/apps/browser.css">
+    <link rel="stylesheet" href="css/apps/fileexplorer.css">
+    <link rel="stylesheet" href="css/apps/calculator.css">
+</head>
+<body>
+    <div id="windows-container">
+        <!-- Desktop Area -->
+        <div id="desktop">
+            <!-- Desktop icons will be generated here -->
+        </div>
+
+        <!-- Taskbar -->
+        <div id="taskbar">
+            <div id="start-button">
+                <img src="assets/icons/start.svg" class="start-icon" alt="Start">
+            </div>
+            <div id="taskbar-apps">
+                <!-- Pinned and open applications will appear here -->
+            </div>
+            <div id="system-tray">
+                <div id="language-indicator">EN</div>
+                <div id="volume-control">
+                    <img src="assets/icons/volume.svg" alt="Volume" width="16" height="16">
+                </div>
+                <div id="clock">00:00</div>
+            </div>
+        </div>
+
+        <!-- Start Menu (hidden by default) -->
+        <div id="start-menu" class="hidden">
+            <div id="user-section">
+                <div id="user-icon"></div>
+                <div id="user-name">User</div>
+            </div>
+            <div id="apps-section">
+                <!-- Applications list will be generated here -->
+            </div>
+            <div id="system-section">
+                <!-- System folders and controls -->
+                <div id="power-options">
+                    <div id="power-button">
+                        <img src="assets/icons/refresh.svg" width="16" height="16" alt="Reload">
+                        <span data-translate="reload">Reload</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Windows applications will appear here as they are opened -->
+        <div id="windows-area"></div>
+
+        <!-- Context Menu (hidden by default) -->
+        <div id="context-menu" class="hidden"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/windowManager.js"></script>
+    <script src="js/contextMenu.js"></script>
+    <script src="js/desktopManager.js"></script>
+    <script src="js/taskbarManager.js"></script>
+    <script src="js/startMenu.js"></script>
+    <script src="js/apps/notepad.js"></script>
+    <script src="js/apps/paint.js"></script>
+    <script src="js/apps/minesweeper.js"></script>
+    <script src="js/apps/snake.js"></script>
+    <script src="js/apps/tetris.js"></script>
+    <script src="js/apps/settings.js"></script>
+    <script src="js/apps/dbviewer.js"></script>
+    <script src="js/apps/browser.js"></script>
+    <script src="js/apps/fileexplorer.js"></script>
+    <script src="js/apps/calculator.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

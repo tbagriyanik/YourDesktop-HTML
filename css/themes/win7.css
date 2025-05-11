@@ -1,0 +1,223 @@
+/* Windows 7 Aero Theme */
+
+/* Global adjustments */
+body {
+    --win7-primary: #1e82d8;
+    --win7-secondary: #1554a9;
+    --win7-accent: #25A0DA;
+    --win7-window-border: rgba(0, 102, 204, 0.8);
+}
+
+/* Desktop background for Windows 7 */
+#windows-container {
+    background-color: #1e7ad4;
+    background-image: linear-gradient(to bottom, #3c96e8, #1a73d8);
+}
+
+/* Window styling - Aero glass effect */
+.window {
+    border: 1px solid var(--win7-window-border);
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+}
+
+.window.active {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Window title bar - Aero style */
+.window-titlebar {
+    background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+    border-bottom: 1px solid #d1d1d1;
+    height: 32px;
+    border-radius: 5px 5px 0 0;
+}
+
+.window.active .window-titlebar {
+    background: linear-gradient(to bottom, var(--win7-accent), var(--win7-primary));
+}
+
+.window-title {
+    font-size: 12px;
+    color: #333;
+    font-weight: normal;
+}
+
+.window.active .window-title {
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Window controls - Windows 7 style */
+.window-control {
+    border-radius: 0;
+    width: 46px;
+    height: 24px;
+    margin: 0;
+    transition: background-color 0.2s;
+}
+
+.window-control.minimize {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="1" viewBox="0 0 10 1"><rect width="10" height="1" fill="%23777"/></svg>') no-repeat center;
+}
+
+.window-control.maximize {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><rect width="10" height="10" fill="none" stroke="%23777" stroke-width="1"/></svg>') no-repeat center;
+}
+
+.window-control.restore {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><rect x="2" y="0" width="8" height="8" fill="none" stroke="%23777" stroke-width="1"/><rect x="0" y="2" width="8" height="8" fill="white" stroke="%23777" stroke-width="1"/></svg>') no-repeat center;
+}
+
+.window-control.close {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><line x1="0" y1="0" x2="10" y2="10" stroke="%23777" stroke-width="1.2"/><line x1="10" y1="0" x2="0" y2="10" stroke="%23777" stroke-width="1.2"/></svg>') no-repeat center;
+}
+
+.window-control.minimize:hover,
+.window-control.maximize:hover,
+.window-control.restore:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.window-control.close:hover {
+    background-color: #e81123;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><line x1="0" y1="0" x2="10" y2="10" stroke="white" stroke-width="1.2"/><line x1="10" y1="0" x2="0" y2="10" stroke="white" stroke-width="1.2"/></svg>');
+}
+
+.window.active .window-control.minimize {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="1" viewBox="0 0 10 1"><rect width="10" height="1" fill="white"/></svg>');
+}
+
+.window.active .window-control.maximize {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><rect width="10" height="10" fill="none" stroke="white" stroke-width="1"/></svg>');
+}
+
+.window.active .window-control.restore {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><rect x="2" y="0" width="8" height="8" fill="none" stroke="white" stroke-width="1"/><rect x="0" y="2" width="8" height="8" fill="%231e82d8" stroke="white" stroke-width="1"/></svg>');
+}
+
+.window.active .window-control.close {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><line x1="0" y1="0" x2="10" y2="10" stroke="white" stroke-width="1.2"/><line x1="10" y1="0" x2="0" y2="10" stroke="white" stroke-width="1.2"/></svg>');
+}
+
+/* Taskbar - Windows 7 style */
+#taskbar {
+    height: 40px;
+    background: linear-gradient(to bottom, #2774c4, #0f52a6);
+    border-top: 1px solid #3e90e5;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Start button - Windows 7 style */
+#start-button {
+    width: 60px;
+    background: linear-gradient(to bottom, #4cc2ff, #0f77bc);
+    border-right: 1px solid #0c4d7b;
+    border-radius: 0;
+}
+
+#start-button:hover {
+    background: linear-gradient(to bottom, #6bd0ff, #1e86cb);
+}
+
+#start-button:active {
+    background: linear-gradient(to bottom, #3c92dc, #0a5a9c);
+}
+
+.start-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Taskbar app buttons - Windows 7 style */
+.taskbar-app {
+    height: 32px;
+    background: linear-gradient(to bottom, #539fe8, #2173c4);
+    border-radius: 3px;
+    border: 1px solid #0c4d7b;
+}
+
+.taskbar-app:hover {
+    background: linear-gradient(to bottom, #65aef5, #3282d5);
+}
+
+.taskbar-app.active {
+    background: linear-gradient(to bottom, #3b92dc, #185fad);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* System tray - Windows 7 style */
+#system-tray {
+    background: linear-gradient(to bottom, #256dc0, #0d4e9c);
+    border-left: 1px solid #0c4d7b;
+}
+
+/* Start menu - Windows 7 style */
+#start-menu {
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+#user-section {
+    background: linear-gradient(to bottom, #3b92dc, #1e5799);
+    padding: 20px;
+}
+
+#user-icon {
+    width: 48px;
+    height: 48px;
+    border: 2px solid white;
+}
+
+#user-name {
+    font-size: 16px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* App items in start menu */
+.app-item {
+    border-radius: 2px;
+}
+
+.app-item:hover {
+    background: linear-gradient(to bottom, #5fade3, #3684d5);
+    color: white;
+}
+
+/* Desktop icons - Windows 7 style */
+.desktop-icon {
+    border-radius: 2px;
+}
+
+.desktop-icon:hover {
+    background-color: rgba(173, 214, 255, 0.3);
+    border-color: rgba(120, 180, 255, 0.5);
+}
+
+.desktop-icon.selected {
+    background-color: rgba(120, 180, 255, 0.3);
+    border-color: rgba(70, 150, 255, 0.7);
+}
+
+/* Context menu - Windows 7 style */
+.desktop-context-menu {
+    background-color: rgba(250, 250, 250, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-context-menu-item {
+    padding: 8px 20px;
+    color: #333;
+}
+
+.desktop-context-menu-item:hover {
+    background: linear-gradient(to bottom, #5fade3, #3684d5);
+    color: white;
+}

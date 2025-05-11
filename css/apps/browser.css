@@ -1,0 +1,162 @@
+/**
+ * Browser Application Styles
+ */
+
+/* Browser window */
+.browser-window {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Toolbar */
+.browser-toolbar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #f9f9f9, #e3e3e3);
+    border-bottom: 1px solid #ccc;
+    padding: 5px 8px;
+    height: 36px;
+    flex-shrink: 0;
+}
+
+.browser-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.browser-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: #555;
+}
+
+.browser-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.browser-btn:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.browser-btn.disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.browser-btn.disabled:hover {
+    background-color: transparent;
+}
+
+.browser-address-bar {
+    flex-grow: 1;
+    margin: 0 8px;
+    position: relative;
+}
+
+.browser-url-input {
+    width: 100%;
+    height: 28px;
+    padding: 0 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.browser-url-input:focus {
+    border-color: #7cb2e0;
+    box-shadow: 0 0 3px rgba(66, 139, 202, 0.5), inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Content area */
+.browser-content {
+    flex: 1;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.browser-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #fff;
+    flex: 1;
+    min-height: 0;
+    display: block;
+}
+
+/* Loading overlay */
+.browser-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.browser-loading-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.browser-loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(66, 139, 202, 0.3);
+    border-top: 3px solid #428bca;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.browser-loading-text {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Status bar */
+.browser-statusbar {
+    height: 24px;
+    background: linear-gradient(to bottom, #f9f9f9, #e3e3e3);
+    border-top: 1px solid #ccc;
+    padding: 3px 8px;
+    font-size: 11px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.browser-status-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

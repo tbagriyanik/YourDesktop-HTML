@@ -1,0 +1,147 @@
+/* Database Viewer Application */
+.dbviewer-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.dbviewer-sidebar {
+    width: 120px;
+    background-color: #f5f5f5;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.dbviewer-sidebar-title {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.dbviewer-store-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.dbviewer-store-item {
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 2px 5px;
+    transition: background-color 0.2s;
+}
+
+.dbviewer-store-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dbviewer-store-item.active {
+    background-color: #e0eaf9;
+    font-weight: bold;
+}
+
+.dbviewer-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.dbviewer-toolbar {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    gap: 10px;
+}
+
+.dbviewer-button {
+    padding: 6px 12px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dbviewer-button:hover {
+    background-color: #e8e8e8;
+}
+
+.dbviewer-data-container {
+    flex: 1;
+    overflow: auto;
+    padding: 10px;
+}
+
+.dbviewer-data {
+    width: 100%;
+}
+
+.dbviewer-loading,
+.dbviewer-empty,
+.dbviewer-error {
+    padding: 20px;
+    text-align: center;
+    color: #777;
+}
+
+.dbviewer-error {
+    color: #d32f2f;
+}
+
+.dbviewer-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.dbviewer-table th {
+    background-color: #f5f5f5;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.dbviewer-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #eee;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dbviewer-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dbviewer-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.dbviewer-item.selected {
+    background-color: #e0eaf9;
+}
+
+.dbviewer-edit-button {
+    padding: 2px 6px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.dbviewer-edit-button:hover {
+    background-color: #2b6ed9;
+}

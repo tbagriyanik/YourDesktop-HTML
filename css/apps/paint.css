@@ -1,0 +1,393 @@
+/* Paint Application Styles */
+.paint-window .window-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Menu Bar */
+.paint-menubar {
+    display: flex;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 2px 0;
+    font-size: 12px;
+    position: relative;
+    z-index: 100;
+}
+
+.paint-menu-item {
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.paint-menu-item:hover, .paint-menu-item.active {
+    background-color: #e5e5e5;
+}
+
+.paint-dropdown {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 150px;
+    display: none;
+}
+
+.paint-dropdown.active {
+    display: block;
+}
+
+.paint-dropdown-item {
+    padding: 5px 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.paint-dropdown-item:hover {
+    background-color: #e5e5e5;
+}
+
+.paint-dropdown-item.disabled {
+    color: #999;
+    cursor: default;
+}
+
+.paint-dropdown-item.disabled:hover {
+    background-color: transparent;
+}
+
+.paint-dropdown-separator {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 5px 0;
+}
+
+/* Toolbar */
+.paint-toolbar {
+    display: flex;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.paint-toolbar-section {
+    display: flex;
+    margin-right: 10px;
+    border-right: 1px solid #e0e0e0;
+    padding-right: 10px;
+}
+
+.paint-toolbar-section:last-child {
+    border-right: none;
+}
+
+.paint-tool {
+    width: 30px;
+    height: 30px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.paint-tool:hover {
+    background-color: #e5e5e5;
+    border-color: #ccc;
+}
+
+.paint-tool.active {
+    background-color: #d5d5d5;
+    border-color: #aaa;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.paint-tool svg {
+    width: 20px;
+    height: 20px;
+    fill: #444;
+}
+
+/* Tool options */
+.paint-options {
+    display: flex;
+    background-color: #ebebeb;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+.paint-option-label {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.paint-option-control {
+    margin-right: 15px;
+}
+
+.paint-size-input {
+    width: 50px;
+}
+
+/* Color palette */
+.paint-colors {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.paint-color {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #aaa;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.paint-color.active {
+    box-shadow: 0 0 0 2px #333;
+}
+
+/* Canvas area */
+.paint-canvas-container {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+    background-color: #c0c0c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paint-canvas {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: crosshair;
+}
+
+/* Status bar */
+.paint-statusbar {
+    display: flex;
+    padding: 3px 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #d1d1d1;
+    font-size: 11px;
+    color: #555;
+}
+
+.paint-coordinates {
+    margin-right: 20px;
+}
+
+.paint-canvas-size {
+    margin-left: auto;
+}
+
+/* Dialogs */
+.paint-dialog {
+    position: absolute;
+    background: white;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    padding: 10px;
+    display: none;
+}
+
+.paint-dialog.active {
+    display: block;
+}
+
+.paint-dialog-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.paint-dialog-content {
+    margin-bottom: 15px;
+}
+
+.paint-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.paint-dialog-button {
+    padding: 5px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: #e1e1e1;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.paint-dialog-button:hover {
+    background-color: #d5d5d5;
+}
+
+.paint-dialog-button.primary {
+    background-color: #2673db;
+    color: white;
+    border-color: #1a5db3;
+}
+
+.paint-dialog-button.primary:hover {
+    background-color: #1e68c5;
+}
+
+/* Save Dialog Styles */
+.paint-dialog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paint-dialog.save-dialog {
+    width: 450px;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: block;
+    padding: 0;
+}
+
+.dialog-header {
+    padding: 10px 15px;
+    background: linear-gradient(to bottom, #5a98de, #3c7bc3);
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-title {
+    font-size: 12px;
+}
+
+.dialog-close {
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.dialog-content {
+    padding: 15px;
+}
+
+.dialog-label {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.dialog-input, .dialog-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dialog-buttons {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #e8e8e8;
+    border-top: 1px solid #ccc;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.dialog-button {
+    padding: 6px 14px;
+    margin-left: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #f5f5f5, #e5e5e5);
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.dialog-button:hover {
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.dialog-button:active {
+    background: linear-gradient(to bottom, #e0e0e0, #d0d0d0);
+}
+
+/* Paint Overlay */
+.paint-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.paint-overlay.active {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .paint-toolbar {
+        padding: 8px 5px;
+    }
+    
+    .paint-tool {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .paint-tool svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .paint-options {
+        padding: 8px 10px;
+    }
+    
+    .paint-option-label {
+        font-size: 14px;
+    }
+    
+    .paint-color {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .paint-statusbar {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}

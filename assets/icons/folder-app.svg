@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="folder_grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFCA28"/>
+            <stop offset="100%" stop-color="#FFB300"/>
+        </linearGradient>
+    </defs>
+    <path d="M10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6H12L10,4Z" fill="url(#folder_grad)" stroke="#E65100" stroke-width="0.5"/>
+    <path d="M17,2V2H7V2H5V2C4.4,2 4,2.4 4,3V4H5V3H7V4H9L9,3H15V4H17V3H19V4H20V3A1,1 0 0,0 19,2H17M17,7H15V8H17V7M7,7H5V8H7V7M19,7V8H20V7H19M5,10H4V11H5V10M19,10H20V11H19V10M20,14H19V15H20V14M5,14H4V15H5V14M7,17H5V18H7V17M19,17H17V18H19V17M8,22H16V16H8V22Z" fill="#7B1FA2" transform="scale(0.6) translate(8, 6)"/>
+</svg>

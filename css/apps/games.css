@@ -1,0 +1,307 @@
+/* Styles for games: Minesweeper, Snake, Tetris */
+
+/* Common game styles */
+.game-window .window-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    border: 2px solid #999;
+    background-color: #c0c0c0;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.game-controls {
+    display: flex;
+    margin-bottom: 15px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.game-button {
+    padding: 5px 10px;
+    background: linear-gradient(to bottom, #f5f5f5, #e1e1e1);
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.game-button:hover {
+    background: linear-gradient(to bottom, #e5e5e5, #d1d1d1);
+}
+
+.game-info {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    font-family: 'Digital', monospace;
+}
+
+.game-score {
+    background-color: #222;
+    color: #e33;
+    padding: 5px 10px;
+    font-size: 18px;
+    border: 2px inset #999;
+    min-width: 80px;
+    text-align: right;
+}
+
+.game-time {
+    margin-left: auto;
+    background-color: #222;
+    color: #e33;
+    padding: 5px 10px;
+    font-size: 18px;
+    border: 2px inset #999;
+    min-width: 80px;
+    text-align: right;
+}
+
+.game-status {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    height: 20px;
+}
+
+.game-levels {
+    display: flex;
+    margin-top: 15px;
+}
+
+.game-level {
+    margin: 0 5px;
+    padding: 3px 10px;
+    border: 1px solid #aaa;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.game-level.active {
+    background-color: #2673db;
+    color: white;
+    border-color: #1a5db3;
+}
+
+/* Minesweeper specific styles */
+.minesweeper-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), 24px);
+    grid-template-rows: repeat(var(--grid-size), 24px);
+    gap: 1px;
+}
+
+.minesweeper-cell {
+    width: 24px;
+    height: 24px;
+    background-color: #c0c0c0;
+    border: 2px outset #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.minesweeper-cell.revealed {
+    border: 1px solid #999;
+    background-color: #d5d5d5;
+}
+
+.minesweeper-cell.flagged {
+    background-color: #c0c0c0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.4,6L14,4H5v17h2v-7h5.6l0.4,2h7V6H14.4z" fill="red"/></svg>');
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.minesweeper-cell.mine {
+    background-color: #ff0000;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="black"/></svg>');
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.minesweeper-face {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border: 2px outset #eee;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Snake specific styles */
+.snake-canvas {
+    border: 2px solid #333;
+    background-color: #222;
+}
+
+.snake-controls {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.snake-direction-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    grid-template-rows: repeat(3, 40px);
+    gap: 5px;
+}
+
+.snake-direction-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    border: 2px outset #eee;
+    cursor: pointer;
+}
+
+.snake-direction-button:active {
+    border-style: inset;
+}
+
+.snake-direction-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}
+
+/* Tetris specific styles */
+.tetris-container {
+    display: flex;
+}
+
+.tetris-board {
+    border: 2px solid #333;
+    background-color: #222;
+    display: grid;
+    grid-template-columns: repeat(10, 25px);
+    grid-template-rows: repeat(20, 25px);
+    gap: 1px;
+}
+
+.tetris-cell {
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    border: 1px solid #444;
+}
+
+.tetris-sidebar {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tetris-next {
+    border: 2px solid #333;
+    background-color: #222;
+    width: 100px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 25px);
+    grid-template-rows: repeat(4, 25px);
+    gap: 0;
+}
+
+.tetris-info {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tetris-label {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.tetris-value {
+    background-color: #222;
+    color: #e33;
+    padding: 5px;
+    font-family: 'Digital', monospace;
+    text-align: right;
+    border: 2px inset #999;
+}
+
+/* Common cell colors */
+.cell-1 { background-color: #00f; }  /* Blue */
+.cell-2 { background-color: #0f0; }  /* Green */
+.cell-3 { background-color: #f00; }  /* Red */
+.cell-4 { background-color: #ff0; }  /* Yellow */
+.cell-5 { background-color: #f0f; }  /* Magenta */
+.cell-6 { background-color: #0ff; }  /* Cyan */
+.cell-7 { background-color: #f70; }  /* Orange */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .game-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .game-score, .game-time {
+        font-size: 20px;
+        min-width: 100px;
+    }
+    
+    .minesweeper-grid {
+        grid-template-columns: repeat(var(--grid-size), 30px);
+        grid-template-rows: repeat(var(--grid-size), 30px);
+    }
+    
+    .minesweeper-cell {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+    
+    .snake-direction-controls {
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: repeat(3, 50px);
+    }
+    
+    .snake-direction-button {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .tetris-board {
+        grid-template-columns: repeat(10, 30px);
+        grid-template-rows: repeat(20, 30px);
+    }
+    
+    .tetris-cell {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .tetris-next {
+        width: 120px;
+        height: 120px;
+        grid-template-columns: repeat(4, 30px);
+        grid-template-rows: repeat(4, 30px);
+    }
+}
